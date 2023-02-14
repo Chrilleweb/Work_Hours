@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Salary calculator</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<h1>Arbejdstidsberegner</h1>
+<form>
+  <label for="dato">Dato:</label>
+  <input type="date" id="dato" name="dato">
+
+  <label for="timer">Timer:</label>
+  <input type="number" id="timer" name="timer">
+
+  <label for="lon">Lon pr. time:</label>
+  <input type="number" id="lon" name="løn">
+
+  <button id="beregn-knap">Beregn</button>
+  <button id="gem-knap">Gem</button>
+
+  <p>Dato: <span id="dato-ud"></span> Timer: <span id="timer-ud"></span> Tjeneste: <span id="samlet"></span> kroner.</p>
+</form>
+<table id="gemt-data-tabel">
+  <tr>
+    <th>Dato</th>
+    <th>Timer</th>
+    <th>Løn pr. time</th>
+  </tr>
+</table>
+<p>Samlet lon: <span id="sum"></span> kroner.</p>
+
+</table>
+<script src="src/main/resources/static/script.js"></script>
+</body>
+</html>
