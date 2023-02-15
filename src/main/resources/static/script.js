@@ -6,18 +6,21 @@ function beregn() {
     var timer = document.getElementById("timer").value;
     var lon = document.getElementById("lon").value;
     var resultat = timer * lon;
-    document.getElementById("samlet").innerHTML = resultat + " Kroner";
+    document.getElementById("samlet").innerHTML = "Du har tjent: " + resultat + " Kroner<br><br>Det er nu gemt i tabellen";
 
     // Gem data i local storage
     var data = JSON.parse(localStorage.getItem("data")) || [];
     data.push({dato: dato, timer: timer, lon: lon});
     localStorage.setItem("data", JSON.stringify(data));
 
+    visData();
+
     // Opdater seneste gemte data
     var seneste = data[data.length - 1];
     document.getElementById("gemtDato").innerHTML = seneste.dato;
     document.getElementById("gemtTimer").innerHTML = seneste.timer;
     document.getElementById("gemtLon").innerHTML = seneste.lon;
+
 }
 
 function visData() {
@@ -97,8 +100,11 @@ function beregnSum() {
     sumElement.innerHTML = sum.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " Kroner";
 }
 
-document.getElementById("beregn-knap").addEventListener("click", beregn);
-document.getElementById("gem-knap").addEventListener("click", visData);
+
+document.getElementById("gem-knap").addEventListener("click", function() {
+    beregn();
+    visData();
+});
 visData();
 
 var todayButton = document.getElementById("todayButton");
