@@ -94,7 +94,7 @@ function beregnSum() {
         return acc + d.lon * d.timer;
     }, 0);
     var sumElement = document.getElementById('sum');
-    sumElement.innerHTML = sum.toFixed(2);
+    sumElement.innerHTML = sum.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " Kroner";
 }
 
 document.getElementById("beregn-knap").addEventListener("click", beregn);
