@@ -22,22 +22,62 @@ function beregn() {
 
 function visData() {
     var data = JSON.parse(localStorage.getItem("data")) || [];
-    var table = document.getElementById("gemt-data-tabel");
-    table.innerHTML = ""; // Clear table contents
-    for (var i = 0; i < data.length; i++) {
-        var row = table.insertRow(-1); // Append row to table
-        var cell1 = row.insertCell(0); // Insert new cells
-        var cell2 = row.insertCell(1);
-        var cell3 = row.insertCell(2);
-        var cell4 = row.insertCell(3); // Delete button cell
+    var table = document.createElement("table");
+    table.style.width = "100%"; // Set table width
+    var thead = document.createElement("thead");
+    var tbody = document.createElement("tbody");
 
-        cell1.innerHTML = data[i].dato; // Set cell content
+    // Add table header row
+    var headerRow = document.createElement("tr");
+    var header1 = document.createElement("th");
+    header1.innerHTML = "Date";
+    var header2 = document.createElement("th");
+    header2.innerHTML = "Hours";
+    var header3 = document.createElement("th");
+    header3.innerHTML = "Hourly rate";
+    var header4 = document.createElement("th");
+    header4.innerHTML = "Delete";
+    headerRow.appendChild(header1);
+    headerRow.appendChild(header2);
+    headerRow.appendChild(header3);
+    headerRow.appendChild(header4);
+    thead.appendChild(headerRow);
+
+    // Add table body rows
+    for (var i = 0; i < data.length; i++) {
+        var row = document.createElement("tr");
+        var cell1 = document.createElement("td");
+        cell1.innerHTML = data[i].dato;
+        var cell2 = document.createElement("td");
         cell2.innerHTML = data[i].timer;
+        var cell3 = document.createElement("td");
         cell3.innerHTML = data[i].lon;
-        cell4.innerHTML = "<button onclick='sletData(" + i + ")'>Slet</button>"; // Set delete button
+        var cell4 = document.createElement("td");
+        var deleteButton = document.createElement("button");
+        deleteButton.innerHTML = "Delete";
+        deleteButton.onclick = (function(index) {
+            return function() {
+                sletData(index);
+            };
+        })(i);
+        cell4.appendChild(deleteButton);
+        row.appendChild(cell1);
+        row.appendChild(cell2);
+        row.appendChild(cell3);
+        row.appendChild(cell4);
+        tbody.appendChild(row);
     }
+
+    table.appendChild(thead);
+    table.appendChild(tbody);
+
+    var tableContainer = document.getElementById("gemt-data-tabel");
+    tableContainer.innerHTML = ""; // Clear table contents
+    tableContainer.appendChild(table);
+
     beregnSum();
 }
+
 
 function sletData(index) {
     var data = JSON.parse(localStorage.getItem("data")) || [];

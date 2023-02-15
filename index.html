@@ -3,32 +3,42 @@
 <head>
   <title>Salary calculator</title>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="src/main/resources/static/style.css">
 </head>
 <body>
 <h1>Arbejdstidsberegner</h1>
 <form>
-  <label for="dato">Dato:</label>
+  <label for="dato">Date:</label>
   <input type="date" id="dato" name="dato">
 
-  <label for="timer">Timer:</label>
+  <label for="timer">Hours:</label>
   <input type="number" id="timer" name="timer">
 
-  <label for="lon">Lon pr. time:</label>
+  <label for="lon">Hourly rate:</label>
   <input type="number" id="lon" name="løn">
 
-  <button id="beregn-knap">Beregn</button>
-  <button id="gem-knap">Gem</button>
+  <button id="beregn-knap">Calculate</button>
+  <button id="gem-knap">Save</button>
 
-  <p>Dato: <span id="dato-ud"></span> Timer: <span id="timer-ud"></span> Tjeneste: <span id="samlet"></span> kroner.</p>
+  <p><span id="dato-ud"></span><span id="timer-ud"></span>Pay that day: <span id="samlet"></span></p>
 </form>
-<table id="gemt-data-tabel">
+<table id="gemt-data-tabel" class="tabel">
+  <thead>
   <tr>
     <th>Dato</th>
     <th>Timer</th>
-    <th>Løn pr. time</th>
+    <th>Lon</th>
   </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <th>Dato</th>
+    <th>Timer</th>
+    <th>Lon pr. time</th>
+  </tr>
+  </tbody>
 </table>
-<p>Samlet lon: <span id="sum"></span> kroner.</p>
+<p id="total-salary">Total salary: <span id="sum"></span></p>
 
 </table>
 <script src="src/main/resources/static/script.js"></script>
