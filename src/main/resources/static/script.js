@@ -6,7 +6,7 @@ function beregn() {
     var timer = document.getElementById("timer").value;
     var lon = document.getElementById("lon").value;
     var resultat = timer * lon;
-    document.getElementById("samlet").innerHTML = resultat;
+    document.getElementById("samlet").innerHTML = resultat + " Kroner";
 
     // Gem data i local storage
     var data = JSON.parse(localStorage.getItem("data")) || [];
@@ -45,6 +45,7 @@ function visData() {
 
     // Add table body rows
     for (var i = 0; i < data.length; i++) {
+        if (data[i].timer.trim() !== "" && data[i].lon.trim() !== "") {
         var row = document.createElement("tr");
         var cell1 = document.createElement("td");
         cell1.innerHTML = data[i].dato;
@@ -55,8 +56,8 @@ function visData() {
         var cell4 = document.createElement("td");
         var deleteButton = document.createElement("button");
         deleteButton.innerHTML = "Delete";
-        deleteButton.onclick = (function(index) {
-            return function() {
+        deleteButton.onclick = (function (index) {
+            return function () {
                 sletData(index);
             };
         })(i);
@@ -67,6 +68,7 @@ function visData() {
         row.appendChild(cell4);
         tbody.appendChild(row);
     }
+}
 
     table.appendChild(thead);
     table.appendChild(tbody);
