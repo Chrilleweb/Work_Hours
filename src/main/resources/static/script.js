@@ -100,3 +100,16 @@ function beregnSum() {
 document.getElementById("beregn-knap").addEventListener("click", beregn);
 document.getElementById("gem-knap").addEventListener("click", visData);
 visData();
+
+var todayButton = document.getElementById("todayButton");
+var datoInput = document.getElementById("dato");
+
+todayButton.addEventListener("click", function() {
+    var today = new Date();
+    var day = String(today.getDate()).padStart(2, "0");
+    var month = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+    var year = today.getFullYear();
+
+    datoInput.value = `${year}-${month}-${day}`;
+});
+
