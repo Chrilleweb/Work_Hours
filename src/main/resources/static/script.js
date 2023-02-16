@@ -19,6 +19,10 @@ function beregn() {
     data.push({dato: dato, timer: timer, lon: lon});
     localStorage.setItem("data", JSON.stringify(data));
 
+    document.getElementById("dato").value = "";
+    document.getElementById("timer").value = "";
+    document.getElementById("lon").value = "";
+
     visData();
 
     // Opdater seneste gemte data
@@ -26,6 +30,8 @@ function beregn() {
     document.getElementById("gemtDato").innerHTML = seneste.dato;
     document.getElementById("gemtTimer").innerHTML = seneste.timer;
     document.getElementById("gemtLon").innerHTML = seneste.lon;
+
+
 
 }
 
