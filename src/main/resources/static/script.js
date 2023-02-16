@@ -12,7 +12,7 @@ function beregn() {
         return;
     }
     var resultat = timer * lon;
-    document.getElementById("samlet").innerHTML = "Du har tjent: " + resultat + " Kroner<br><br>Det er nu gemt i tabellen";
+    document.getElementById("samlet").innerHTML = "You have earned: " + resultat + " Kroner<br><br>It is now stored in the table below";
 
     // Gem data i local storage
     var data = JSON.parse(localStorage.getItem("data")) || [];
