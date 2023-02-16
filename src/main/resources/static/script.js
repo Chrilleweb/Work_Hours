@@ -71,6 +71,7 @@ function visData() {
         var cell4 = document.createElement("td");
         var deleteButton = document.createElement("button");
         deleteButton.innerHTML = "Delete";
+        deleteButton.className = "delete-button";
         deleteButton.onclick = (function (index) {
             return function () {
                 sletData(index);

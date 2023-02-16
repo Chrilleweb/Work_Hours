@@ -49,6 +49,14 @@ button:hover {
     background-color: #3e8e41;
 }
 
+.delete-button{
+    background-color: #d9534f;
+}
+
+.delete-button:hover{
+    background-color: #c34a47;
+}
+
 .tabel {
     border-collapse: collapse;
     width: 100%;
