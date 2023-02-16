@@ -5,6 +5,12 @@ function beregn() {
     var dato = document.getElementById("dato").value;
     var timer = document.getElementById("timer").value;
     var lon = document.getElementById("lon").value;
+
+
+    if (isNaN(timer) || isNaN(lon)) {
+        alert("Horus and Hourly rate needs to be only numbers");
+        return;
+    }
     var resultat = timer * lon;
     document.getElementById("samlet").innerHTML = "Du har tjent: " + resultat + " Kroner<br><br>Det er nu gemt i tabellen";
 
