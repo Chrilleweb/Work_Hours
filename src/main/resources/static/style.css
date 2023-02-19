@@ -74,6 +74,10 @@ button:hover {
     background-color: #d9534f;
 }
 
+.big-delete{
+    width: 40%;
+}
+
 #delete-all-button{
     background-color: #d9534f;
     width: 17.5%;
@@ -90,7 +94,11 @@ button:hover {
 }
 
 #gem-knap{
-    margin-top: 40px;
+    margin-top: 20px;
+}
+
+#samlet{
+    text-align: center;
 }
 
 .tabel {

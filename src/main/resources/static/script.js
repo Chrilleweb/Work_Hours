@@ -55,7 +55,16 @@ function visData() {
     var header3 = document.createElement("th");
     header3.innerHTML = "Hourly rate";
     var header4 = document.createElement("th");
-    header4.innerHTML = "Delete";
+    var deleteAllButton = document.createElement("button");
+    deleteAllButton.innerHTML = "Delete Table";
+    deleteAllButton.className = "delete-button rounded big-delete";
+    deleteAllButton.onclick = function() {
+        if (confirm("Are you sure you want to delete the table?")) {
+            localStorage.setItem("data", "[]");
+            visData();
+        }
+    };
+    header4.appendChild(deleteAllButton);
     headerRow.appendChild(header1);
     headerRow.appendChild(header2);
     headerRow.appendChild(header3);
@@ -97,13 +106,6 @@ function visData() {
     tableContainer.innerHTML = ""; // Clear table contents
     tableContainer.appendChild(table);
 
-    var deleteAllButton = document.getElementById("delete-all-button");
-    deleteAllButton.onclick = function () {
-        if (confirm("Are you sure you want to delete the table?")) {
-            localStorage.setItem("data", "[]");
-            visData();
-        }
-    };
 
     beregnSum();
 }
