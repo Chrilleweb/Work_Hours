@@ -97,6 +97,14 @@ function visData() {
     tableContainer.innerHTML = ""; // Clear table contents
     tableContainer.appendChild(table);
 
+    var deleteAllButton = document.getElementById("delete-all-button");
+    deleteAllButton.onclick = function () {
+        if (confirm("Are you sure you want to delete the table?")) {
+            localStorage.setItem("data", "[]");
+            visData();
+        }
+    };
+
     beregnSum();
 }
 

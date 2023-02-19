@@ -13,8 +13,6 @@ h1 {
     padding-top: 30px;
 }
 
-
-
 form {
     display: flex;
     flex-direction: column;
@@ -57,6 +55,16 @@ button:hover {
 
 .delete-button{
     background-color: #d9534f;
+}
+
+#delete-all-button{
+    background-color: #d9534f;
+    margin-left: 82%;
+}
+
+#delete-all-button:hover{
+    background-color: #c34a47;
+
 }
 
 .delete-button:hover{
