@@ -76,7 +76,11 @@ function visData() {
         if (data[i].timer.trim() !== "" && data[i].lon.trim() !== "") {
             var row = document.createElement("tr");
             var cell1 = document.createElement("td");
-            cell1.innerHTML = data[i].dato;
+            if (data[i].dato.trim() !== "") {
+                cell1.innerHTML = data[i].dato;
+            } else {
+                cell1.innerHTML = "NO DATE";
+            }
             var cell2 = document.createElement("td");
             cell2.innerHTML = data[i].timer;
             var cell3 = document.createElement("td");
