@@ -114,8 +114,17 @@ button:hover {
     font-size: 20px;
 }
 
-#copy-right{
+/*#copy-right{
     text-align: center;
-    margin-top: 50px;
+    margin-top: auto;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     margin-bottom: 20px;
+}*/
+
+footer{
+    text-align: center;
+    margin-top: auto;
 }
+
