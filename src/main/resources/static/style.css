@@ -34,6 +34,23 @@ input {
     width: 200px;
 }
 
+#dato{
+    margin-bottom: 15px;
+}
+
+.hide-dato{
+    color: white;
+}
+
+
+#timer{
+    margin-bottom: 15px;
+}
+
+#lon{
+    margin-bottom: 5px;
+}
+
 button {
     background-color: #4CAF50;
     color: white;
@@ -115,15 +132,6 @@ button:hover {
     font-size: 20px;
     margin-bottom: 50px;
 }
-
-/*#copy-right{
-    text-align: center;
-    margin-top: auto;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    margin-bottom: 20px;
-}*/
 
 footer{
     text-align: center;
