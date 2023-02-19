@@ -12,7 +12,7 @@ function beregn() {
         return;
     }
     var resultat = timer * lon;
-    document.getElementById("samlet").innerHTML = "You have earned: " + resultat + " Kroner<br><br>It is now stored in the table below";
+    document.getElementById("samlet").innerHTML = "<br>You have earned: " + resultat + " Kroner<br>It is now stored in the table below";
 
     // Gem data i local storage
     var data = JSON.parse(localStorage.getItem("data")) || [];
@@ -61,30 +61,30 @@ function visData() {
     // Add table body rows
     for (var i = 0; i < data.length; i++) {
         if (data[i].timer.trim() !== "" && data[i].lon.trim() !== "") {
-        var row = document.createElement("tr");
-        var cell1 = document.createElement("td");
-        cell1.innerHTML = data[i].dato;
-        var cell2 = document.createElement("td");
-        cell2.innerHTML = data[i].timer;
-        var cell3 = document.createElement("td");
-        cell3.innerHTML = data[i].lon;
-        var cell4 = document.createElement("td");
-        var deleteButton = document.createElement("button");
-        deleteButton.innerHTML = "Delete";
-        deleteButton.className = "delete-button";
-        deleteButton.onclick = (function (index) {
-            return function () {
-                sletData(index);
-            };
-        })(i);
-        cell4.appendChild(deleteButton);
-        row.appendChild(cell1);
-        row.appendChild(cell2);
-        row.appendChild(cell3);
-        row.appendChild(cell4);
-        tbody.appendChild(row);
+            var row = document.createElement("tr");
+            var cell1 = document.createElement("td");
+            cell1.innerHTML = data[i].dato;
+            var cell2 = document.createElement("td");
+            cell2.innerHTML = data[i].timer;
+            var cell3 = document.createElement("td");
+            cell3.innerHTML = data[i].lon;
+            var cell4 = document.createElement("td");
+            var deleteButton = document.createElement("button");
+            deleteButton.innerHTML = "Delete";
+            deleteButton.className = "delete-button rounded btn-sm";
+            deleteButton.onclick = (function (index) {
+                return function () {
+                    sletData(index);
+                };
+            })(i);
+            cell4.appendChild(deleteButton);
+            row.appendChild(cell1);
+            row.appendChild(cell2);
+            row.appendChild(cell3);
+            row.appendChild(cell4);
+            tbody.appendChild(row);
+        }
     }
-}
 
     table.appendChild(thead);
     table.appendChild(tbody);
