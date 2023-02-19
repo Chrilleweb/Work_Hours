@@ -10,6 +10,7 @@ h1 {
     font-size: 32px;
     text-align: center;
     margin-top: 20px;
+    padding-top: 30px;
 }
 
 
@@ -43,6 +44,11 @@ button {
     border-radius: 5px;
     margin-top: 10px;
     cursor: pointer;
+    border-radius: 10px;
+}
+
+.custom-btn{
+    width: 10%;
 }
 
 button:hover {
@@ -55,6 +61,10 @@ button:hover {
 
 .delete-button:hover{
     background-color: #c34a47;
+}
+
+#gem-knap{
+    margin-top: 40px;
 }
 
 .tabel {
