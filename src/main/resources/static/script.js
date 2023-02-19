@@ -11,6 +11,10 @@ function beregn() {
         alert("Horus and Hourly rate needs to be only numbers");
         return;
     }
+    if (timer === "" || lon === "") {
+        alert("Please enter both hours and hourly rate");
+        return;
+    }
     var resultat = timer * lon;
     document.getElementById("samlet").innerHTML = "<br>You have earned: " + resultat + " Kroner<br>It is now stored in the table below";
 
