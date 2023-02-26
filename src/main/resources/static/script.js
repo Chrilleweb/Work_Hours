@@ -131,8 +131,34 @@ function beregnSum() {
     sumElement.innerHTML = sum.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " Kroner";
 }
 
+// Get the table element and the toggle button
+const table = document.getElementById('gemt-data-tabel');
+const toggleBtn = document.getElementById('toggle-btn');
+
+// Set the initial state to hidden
+let isTableBodyHidden = false;
+toggleTableBody();
+
+// Add click event listener to the toggle button
+toggleBtn.addEventListener('click', () => {
+    isTableBodyHidden = !isTableBodyHidden;
+    toggleTableBody();
+});
+
+// Function to toggle the visibility of the table body
+function toggleTableBody() {
+    const tableBody = table.querySelector('tbody');
+    tableBody.querySelectorAll('tr').forEach(row => {
+        row.style.display = isTableBodyHidden ? 'none' : 'table-row';
+    });
+    toggleBtn.textContent = isTableBodyHidden ? 'Show Table' : 'Hide Table';
+}
+
+
 
 document.getElementById("gem-knap").addEventListener("click", function() {
+    isTableBodyHidden = false;
+    toggleTableBody();
     beregn();
     visData();
 });
@@ -149,5 +175,6 @@ todayButton.addEventListener("click", function() {
 
     datoInput.value = `${year}-${month}-${day}`;
 });
+
 
 
