@@ -207,6 +207,15 @@ button:hover {
     background-color: #9a9a9a;
 }
 
+.but-icon-small{
+    color: #9a9a9a;
+    background-color: #fff;
+}
+
+.but-icon-small:hover{
+    background-color: #f5f5f5;
+}
+
 .tabel {
     border-collapse: collapse;
     width: 100%;

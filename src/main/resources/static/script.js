@@ -57,7 +57,7 @@ function visData() {
     var header4 = document.createElement("th");
     var deleteAllButton = document.createElement("button");
     deleteAllButton.innerHTML = "";
-    deleteAllButton.className = "but-icon fa fa-trash fa-lg";
+    deleteAllButton.className = "but-icon fa fa-trash fa-2x";
     deleteAllButton.onclick = function() {
         if (confirm("Are you sure you want to delete the table?")) {
             localStorage.setItem("data", "[]");
@@ -87,8 +87,8 @@ function visData() {
             cell3.innerHTML = data[i].lon;
             var cell4 = document.createElement("td");
             var deleteButton = document.createElement("button");
-            deleteButton.innerHTML = "Delete";
-            deleteButton.className = "delete-button rounded btn-sm";
+            deleteButton.innerHTML = "";
+            deleteButton.className = "but-icon-small but-icon fa fa-trash fa-lg";
             deleteButton.onclick = (function (index) {
                 return function () {
                     sletData(index);
