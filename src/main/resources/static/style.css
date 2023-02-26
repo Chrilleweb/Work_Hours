@@ -15,16 +15,19 @@ h1 {
     text-align: center;
     margin-top: 20px;
     padding-top: 50px;
+    color: #808080;
 }
 
 .table-p{
     margin-top: 10px;
+    font-weight: bold;
+    color: #808080;
 }
 
 .table-one{
     display: inline-block;
     padding: 0.7em 1em;
-    background-color: #007bff;
+    background-color: #9a9a9a;
     color: #fff;
     text-decoration: none;
     border-radius: 4px;
@@ -33,13 +36,88 @@ h1 {
     text-align: center;
     margin-left: 10px;
     margin-right: 10px;
+    text-decoration: none;
 }
 
+.table-one:link{
+    text-decoration: none;
+}
+
+.table-one:hover{
+    color: #fff;
+    background-color: #8d8d8d;
+}
+
+#todayButton{
+    height: 46px;
+    width: 100px;
+    margin-left: 10px;
+    margin-bottom: 16px;
+    background-color: #9a9a9a;
+}
+
+#todayButton:hover{
+    background-color: #8d8d8d;
+}
+
+#toggle-btn {
+    display: block;
+    margin: 2rem auto 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #9a9a9a;
+    color: #fff;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    width: 15%;
+}
+
+#toggle-btn:hover{
+    background-color: #8d8d8d;
+}
+
+/* Styles for the form */
 form {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #808080;
+}
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+input[type="text"],
+input[type="date"] {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+}
+.date-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    margin: 20px;
+    margin-bottom: 1rem;
+}
+.hide-dato {
+    display: none;
+}
+button {
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+.custom-btn {
+    background-color: #28a745;
+}
+#samlet {
+    font-weight: bold;
+    text-align: center;
 }
 
 label {
@@ -93,11 +171,12 @@ button:hover {
 }
 
 .delete-button{
-    background-color: #d9534f;
+    background-color: #ff4e4e;
 }
 
 .big-delete{
-    width: 40%;
+    width: 30%;
+    background-color: #9a9a9a;
 }
 
 #delete-all-button{
@@ -112,15 +191,12 @@ button:hover {
 }
 
 .delete-button:hover{
-    background-color: #c34a47;
+    background-color: #ff3a3a;
 }
 
 #gem-knap{
     margin-top: 20px;
-}
-
-#samlet{
-    text-align: center;
+    width: 20%;
 }
 
 .tabel {
@@ -139,9 +215,10 @@ button:hover {
 }
 
 .tabel th {
-    background-color: #f2f2f2;
+    background-color: #9a9a9a;
     font-weight: bold;
     text-transform: uppercase;
+    color: #fff;
 }
 
 .tabel tbody tr:hover {
@@ -163,8 +240,14 @@ button:hover {
     margin-bottom: 50px;
 }
 
-footer{
+footer {
     text-align: center;
-    margin-top: auto;
+    padding: 1rem;
+    font-size: 0.8rem;
+    height: 15px;
+    margin-bottom: 10px;
+}
+#copy-right {
+    color: #777;
 }
 
