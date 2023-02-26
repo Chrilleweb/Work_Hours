@@ -199,6 +199,14 @@ button:hover {
     width: 20%;
 }
 
+.but-icon{
+    background-color: #9a9a9a;
+}
+
+.but-icon:hover{
+    background-color: #9a9a9a;
+}
+
 .tabel {
     border-collapse: collapse;
     width: 100%;
