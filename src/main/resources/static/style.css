@@ -17,11 +17,13 @@ h1 {
     padding-top: 50px;
 }
 
-
+.table-p{
+    margin-top: 10px;
+}
 
 .table-one{
     display: inline-block;
-    padding: 0.5em 2em;
+    padding: 0.7em 1em;
     background-color: #007bff;
     color: #fff;
     text-decoration: none;
@@ -29,7 +31,6 @@ h1 {
     border: none;
     cursor: pointer;
     text-align: center;
-    margin-top: 20px;
 }
 
 form {
