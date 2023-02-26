@@ -56,8 +56,8 @@ function visData() {
     header3.innerHTML = "Hourly rate";
     var header4 = document.createElement("th");
     var deleteAllButton = document.createElement("button");
-    deleteAllButton.innerHTML = "Delete Table";
-    deleteAllButton.className = "delete-button rounded big-delete";
+    deleteAllButton.innerHTML = "";
+    deleteAllButton.className = "but-icon fa fa-trash fa-lg";
     deleteAllButton.onclick = function() {
         if (confirm("Are you sure you want to delete the table?")) {
             localStorage.setItem("data2", "[]");
