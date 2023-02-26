@@ -6,11 +6,30 @@ body {
     padding: 0;
 }
 
+#link-container{
+    text-align: center;
+}
+
 h1 {
     font-size: 32px;
     text-align: center;
     margin-top: 20px;
     padding-top: 50px;
+}
+
+
+
+.table-one{
+    display: inline-block;
+    padding: 0.5em 2em;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
 }
 
 form {
