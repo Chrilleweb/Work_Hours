@@ -7,7 +7,7 @@ body {
     zoom: 100%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 568px) {
     body {
         zoom: 100%;
     }
@@ -76,7 +76,6 @@ h1 {
     color: #fff;
     border-radius: 0.25rem;
     cursor: pointer;
-    width: 15%;
 }
 
 #toggle-btn:hover{
