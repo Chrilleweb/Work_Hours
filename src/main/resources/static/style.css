@@ -4,7 +4,7 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
-    zoom: 80%;
+    zoom: 100%;
 }
 
 @media screen and (max-width: 768px) {
