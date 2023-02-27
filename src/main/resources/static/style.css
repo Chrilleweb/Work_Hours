@@ -11,6 +11,9 @@ body {
     body{
         zoom: 50%;
     }
+    #todayButton{
+        font-size: 80%;
+    }
 }
 
 
@@ -57,8 +60,6 @@ h1 {
 }
 
 #todayButton{
-    margin-left: 10px;
-    margin-bottom: 16px;
     background-color: #9a9a9a;
 }
 
