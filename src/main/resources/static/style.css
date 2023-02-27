@@ -4,14 +4,15 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
-    zoom: 100%;
+    zoom: 90%;
 }
 
-@media screen and (max-width: 568px) {
-    body {
-        zoom: 100%;
+@media screen and (max-width: 567px) {
+    body{
+        zoom: 50%;
     }
 }
+
 
 #link-container{
     text-align: center;
